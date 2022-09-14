@@ -1,0 +1,100 @@
+module control(
+		input clock, reset, c, e, p, z, n,
+		input [11:0]pc_dataout,
+		input [3:0]op,
+		input [3:0]cc,
+		input [11:0]s_a,
+		input [11:0]de_a,
+		input [31:0]rf_data1,
+		input [31:0]rf_data2,
+		input [32:0]alu_result,
+		
+		inout reg[31:0]m_data,
+       
+		output reg pc_cmd, ir_cmd, rf_write, psr_cmd, m_rw_,		   				
+		output reg [11:0]pc_datain,
+		output reg [11:0]ir_datain,
+		output reg [31:0]rf_dataw,
+		output reg [11:0]rf_addrw,
+		output reg [11:0]rf_addr1,
+		output reg [11:0]rf_addr2,
+		output reg [31:0]alu_src1,
+		output reg [31:0]alu_src2,
+		output reg [3:0]alu_function,
+		output reg [4:0]psr_datain,
+		output reg [11:0]m_addr
+		//output reg [1:0]m_addr
+		);
+reg [2:0] cnt;
+reg [31:0] MDR;
+
+always @(posedge clock or posedge reset)
+begin
+	if (reset) 
+		cnt <= 0;
+	else begin
+	    if (cnt==4)
+	       cnt <= 0;
+		else 
+	    cnt <= cnt+1;
+	end
+end
+always@ *
+begin
+    case(cnt)
+		0:begin     
+			pc_cmd<=1; ir_cmd<=0; rf_write<=0; psr_cmd<=0;
+			m_addr <= pc_dataout; m_rw_<=1;
+			ir_datain <= m_data;
+			pc_datain <= pc_dataout + 1;
+		end
+    	1:begin      
+    	   	pc_cmd<=0; m_rw_<=0; ir_cmd<=1; rf_write<=0; psr_cmd<=0;
+    	   	if(cc[3])
+				alu_src1 <= {20'b0, s_a};
+			else
+				rf_addr1 <= s_a;
+				alu_src1 <= rf_data1;
+			if(cc[2])
+				alu_src2 <= {20'b0, de_a};
+			else
+				rf_addr2 <= de_a;
+				alu_src2 <= rf_data2;							
+		end
+    	2:begin    
+			pc_cmd<=0; m_rw_<=0; ir_cmd<=1; rf_write<=0; psr_cmd<=0;
+			alu_function <= op;
+		end
+    	3:begin 
+    	   	ir_cmd<=1; rf_write<=0; psr_cmd<=0;
+    	   	if(op==4'b0010)begin
+				m_addr <= alu_result[11:0]; m_rw_<=1;				
+				MDR <= m_data;
+    	   	end
+    	   	else if(op==4'b0011)begin
+				m_data <= alu_src1;
+				m_addr <= alu_result[11:0]; m_rw_<=0;
+			end								
+    	   	if(op==4'b0001)begin
+				pc_datain <= alu_result[11:0]; pc_cmd<=1;
+			end
+		end
+    	4:begin   
+    	   	pc_cmd<=0; m_rw_<=0; ir_cmd<=1;
+    	   	psr_datain[0] <= c;
+			psr_datain[1] <= e;
+			psr_datain[2] <= p;
+			psr_datain[3] <= z;
+			psr_datain[4] <= n; psr_cmd<=1;
+			if(op==4'b0010)begin
+				rf_dataw <= MDR;
+				rf_addrw <= de_a; rf_write<=1;
+			end
+			else begin
+				rf_dataw <= alu_result;
+				rf_addrw <= de_a; rf_write<=1;
+			end
+		end
+	endcase
+end
+endmodule

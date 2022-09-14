@@ -1,0 +1,8 @@
+WED
+
+	Undo Commands
+	     1.	Edit Waveform
+	     2.	Clock
+	     3.	Insert Node or Bus
+
+

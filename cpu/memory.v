@@ -1,0 +1,54 @@
+module memory(clock,reset,m_addr,m_data,m_rw_);
+
+input clock;
+input reset;
+input [11:0] m_addr;
+
+inout reg[31:0] m_data;
+
+input m_rw_;
+reg [31:0] mem [0:31];
+
+always @(posedge clock or posedge reset) begin
+	if (reset) begin
+	    mem [0] <= 32'h28000001;      
+	    mem [1] <= 32'h20009000;      
+	    mem [2] <= 32'h12000004;      
+	    mem [3] <= 32'h48001001;      
+	    mem [4] <= 32'h78001000;      
+	    mem [5] <= 32'h18000007;      
+	    mem [6] <= 32'h10000002;      
+	    mem [7] <= 32'h3000100A;      
+	    mem [8] <= 32'h9FFFFFFF;      
+	    mem [9] <= 32'h5555AAAA;      
+	    mem [10] <= 32'h00000000;
+	    mem [11] <= 32'h00000000;
+	    mem [12] <= 32'h00000000;
+	    mem [13] <= 32'h00000000;
+	    mem [14] <= 32'h00000000;
+	    mem [15] <= 32'h00000000;
+	    mem [16] <= 32'h00000000;
+	    mem [17] <= 32'h00000000;
+	    mem [18] <= 32'h00000000;
+	    mem [19] <= 32'h00000000;
+	    mem [20] <= 32'h00000000;
+	    mem [21] <= 32'h00000000;
+	    mem [22] <= 32'h00000000;
+	    mem [23] <= 32'h00000000;
+	    mem [24] <= 32'h00000000;
+	    mem [25] <= 32'h00000000;
+	    mem [26] <= 32'h00000000;
+	    mem [27] <= 32'h00000000;
+	    mem [28] <= 32'h00000000;
+	    mem [29] <= 32'h00000000;
+	    mem [30] <= 32'h00000000;
+	    mem [31] <= 32'h00000000;				
+	end
+	else begin
+		if (m_rw_)
+			m_data <= mem [m_addr];
+		else
+			mem [m_addr] <= m_data;		
+		end
+end
+endmodule

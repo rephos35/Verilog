@@ -1,0 +1,39 @@
+`define CARRY		4'b0001
+`define EVEN		4'b0010
+`define PARITY		4'b0011
+`define ZERO		4'b0100
+`define NEGATIVE	4'b0101
+
+module PSR(clk, psr_cmd, psr_datain, psr_dataout); //狀態暫存器
+	//0-5	
+	input 		clk;
+	input 		psr_cmd;//0>out 1>write in
+	input 		[32:0] psr_datain;	//ALU
+	output reg 	[4:0] psr_dataout; //out'=out
+	reg 			[4:0] psr;
+	
+	
+
+	
+	
+	always @(posedge clk)begin
+		if(psr_cmd)begin
+			psr<={psr_datain[31], ~psr_datain, ^psr_datain, ~psr_datain[0], psr_datain[32]};//reg=in
+		end else begin 
+			psr_dataout<=psr;//out=reg
+		end
+	end
+
+
+endmodule
+/*
+
+reg [4:0]register;
+always@(posedge clock)begin
+	if(psr_cmd)
+		register = psr_datain;
+	else begin
+		psr_dataout = register;
+	end
+end
+*/

@@ -1,0 +1,235 @@
+module Controller(clk,reset, m_data,	pc_dataout,	rf_data1, rf_data2, ir_dataout, alu_result, psr_dataout, m_rw,	 m_addr, pc_cmd, pc_datain, rf_write, 
+rf_dataw, rf_addrw, rf_addr1, rf_addr2, ir_cmd, ir_datain, alu_function, alu_src1, alu_src2, psr_cmd, psr_datain);
+	input 	clk;
+	input 	reset;
+	inout 	[31:0]m_data;
+	input  	[11:0]pc_dataout;
+	input		[31:0]rf_data1, rf_data2;
+	input		[31:0]ir_dataout;
+	input 	[32:0]alu_result;
+	input 	[4:0] psr_dataout;
+	output reg	m_rw;
+	output reg	[11:0]m_addr;
+	output reg 	pc_cmd;
+	output reg 	[11:0]pc_datain;
+	output reg	rf_write;
+	output reg  [31:0]rf_dataw;
+	output reg  [3:0]rf_addrw;
+	output reg	[3:0]rf_addr1, rf_addr2;
+	output reg	ir_cmd;
+	output reg	[31:0]ir_datain;
+	output reg	[3:0]alu_function;
+	output reg	[31:0]alu_src1, alu_src2;
+	output reg	psr_cmd;
+	output reg	[32:0] psr_datain;
+
+//	//mem, reg, pc, ir, alu, psr
+//	output 	m_rw,	//
+//	output 	[11:0]m_addr,//=pc_dataout 
+//	inout 	[31:0]m_data,
+//
+//	output 	rf_write, rf_dataw, rf_addrw,//
+//	output	[11:0]rf_addr1, rf_addr2,//
+//	input		[31:0]rf_data1, rf_data2,
+//
+//	output reg 	pc_cmd,
+//	output reg 	[11:0]pc_datain,//??
+//	input  	[11:0]pc_dataout,
+//
+//	output	ir_cmd;
+//	output	[31:0]ir_datain;//=m_data
+//	input		[31:0]ir_dataout;
+//
+//
+//	output 	[3:0]alu_function;//=ir_dataout[31:28]
+//	output reg	[31:0]alu_src1, alu_src2; //??=rf_data1, rf_data2
+//	input 	[31:0]alu_result; 
+//	input 	[4:0]alu_psr;
+//		 
+//	output 	psr_cmd;
+//	output 	[4:0] psr_datain;//=alu_psr
+//	input 	[4:0] psr_dataout; 	
+//	
+	
+	
+	
+	
+	
+	
+	reg [2:0]state;
+	reg [2:0]state_new;
+	reg [3:0]cc;
+	reg c,e,p,z,n;
+	reg [31:0]MDR;
+	reg [31:0]MDR2;
+
+	parameter	RESET	=3'b000,
+					IF		=3'b001,
+					ID		=3'b010,
+					EXE	=3'b011,
+					MEM	=3'b100,
+					WB		=3'b101;
+	parameter	NOP	=4'b0000,
+					BRA	=4'b0001,
+					LD		=4'b0010,
+					STR	=4'b0011,
+					ADD	=4'b0100,
+					MUL	=4'b0101,
+					CMP	=4'b0110,
+					SHF	=4'b0111,
+					ROT	=4'b1000,
+					HLT	=4'b1001;
+
+
+	initial begin 
+		state=RESET;
+		m_rw<=0; pc_cmd<=0; ir_cmd<=0; rf_write<=0; psr_cmd<=0;
+	end
+	
+	assign m_data=((state==MEM)&&(ir_dataout[31:28]==STR)?MDR2:32'hzzzzzzzz);
+	
+	always @(posedge clk or posedge reset)begin
+		if(reset)begin
+			state<=RESET;
+		end else begin
+			state<=state_new;
+			case(state)
+				RESET:
+					state_new<=IF;
+					
+					
+				IF:begin
+					state_new<=ID;
+					m_rw<=0; pc_cmd<=1; ir_cmd<=0; rf_write<=0; psr_cmd<=0;
+					m_addr<=pc_dataout;//addr=pc nonblocking??
+					ir_datain<=m_data;//ir=mem[pc]
+					pc_datain<=pc_dataout+1;//pc=pc+1
+					
+	//				m_addr<=pc_dataout;//PC>MEM		addr=pc  nonblocking??
+	//				ir_datain<=m_data;//MEM>IR  	ir=mem[pc]
+	//				//pc_datain=???
+				end
+				ID:begin
+					//reg
+					state_new<=EXE;
+					//m_rw<=0; pc_cmd<=0; ir_cmd<=1; rf_write<=0; psr_cmd<=0;
+					pc_cmd<=0; ir_cmd<=1;
+					case(ir_dataout[31:28])
+						BRA:begin
+							cc<=ir_dataout[27:24];
+						end
+						
+						STR:begin//ok
+							//s1:
+							if(ir_dataout[27])begin
+								//imm
+								MDR2<={20'h0,ir_dataout[23:12]};//32
+							end else begin
+								//reg
+								rf_addr1<=ir_dataout[15:12];
+								MDR2<=rf_data1;//32
+							end
+						end	
+						
+						ADD, MUL, CMP, SHF, ROT:begin//ok
+							if(ir_dataout[27])
+								alu_src1<={20'h00000,ir_dataout[23:12]};//s1=imm		
+							else begin		
+								rf_addr1<=ir_dataout[15:12];//reg[addr]
+								alu_src1<=rf_data1;//s1=reg[addr]
+							end
+							rf_addrw<=ir_dataout[3:0];
+							rf_addr2<=ir_dataout[3:0];
+							alu_src2<=rf_data2;
+//							if(ir_dataout[26])
+//								alu_src2<={20'h0,ir_dataout[11:0]};//s2=imm	20h'0?	
+//								//rf_addrw<=ir_dataout[3:0];
+//							else begin		
+//								rf_addr2<=ir_dataout[3:0];//reg[addr]
+//								alu_src2<=rf_data2;//s2=reg[addr]
+//							end
+						end
+						
+						HLT:
+							$stop;//?
+							
+					endcase	
+				end
+				EXE:begin//ok
+					state_new<=MEM;
+					//m_rw<=0; pc_cmd<=0; ir_cmd<=1; rf_write<=0; psr_cmd<=0;
+					alu_function<=ir_dataout[31:28];
+					if(ir_dataout[31:28]==BRA)begin
+						case(cc)
+							4'b0001:c=1;
+							4'b0010:e=1;
+							4'b0011:p=1;
+							4'b0100:z=1;
+							4'b0101:n=1;
+						endcase
+					end
+				end
+				MEM:begin
+					state_new<=WB;
+					//m_rw<=0/1; pc_cmd<=0; ir_cmd<=1; rf_write<=0; psr_cmd<=0;
+					ir_cmd<=0;
+					case(ir_dataout[31:28])//ALU>PSR>MEM OR REG
+						BRA:begin
+							if((cc==0)||(c==1&&psr_dataout[0]==1)
+										||(e==1&&psr_dataout[1]==1)
+										||(p==1&&psr_dataout[2]==1)
+										||(z==1&&psr_dataout[3]==1)
+										||(n==1&&psr_dataout[4]==1))begin
+								pc_cmd<=1;
+								pc_datain<=ir_dataout[11:0];
+							end
+						end
+						
+						LD:begin//ok
+							//s1:read
+							m_rw<=0;
+							if(ir_dataout[27])begin
+								//imm
+								MDR<={20'h00000,ir_dataout[23:12]};//32
+							end else begin
+								//mem
+								m_addr<=ir_dataout[23:12];
+								MDR<=m_data;//32
+							end
+						end
+						
+						STR:begin//ok
+							//s2:write
+							m_rw<=1;
+							//m_data <= alu_src1; mdr?
+							m_addr<=ir_dataout[11:0];
+						end	
+					endcase
+				end
+				
+				WB:begin//store PSR?
+					state_new<=IF;
+					//m_rw<=0; pc_cmd<=0; ir_cmd<=1; rf_write<=1; psr_cmd<=1;
+					pc_cmd<=0;
+					case(ir_dataout[31:28])//ALU>PSR>MEM OR REG
+						LD:begin
+							//psr alu_src1
+							rf_write<=1; psr_cmd<=1;
+							psr_datain<={1'b0,MDR};//33
+							rf_addrw<=ir_dataout[3:0];
+							rf_dataw<=MDR;//32
+						end
+						ADD, MUL, CMP, SHF, ROT:begin
+							//psr alu_src1
+							m_rw<=0; rf_write<=1; psr_cmd<=1;
+							psr_datain<=alu_result;
+							rf_dataw<=alu_result[31:0];
+							rf_addrw<=ir_dataout[3:0];
+						end
+					endcase
+				end
+				
+			endcase
+		end
+	end
+endmodule

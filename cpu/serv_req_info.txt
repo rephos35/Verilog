@@ -1,0 +1,192 @@
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>AMERGE</sub_system>
+	<file>/quartus/atm/amerge/amerge_kpt_op.cpp</file>
+	<line>220</line>
+	<callstack>
+	0x0f44b0dd:
+	0x001e8eab: CCL_FIO + 0x18eab (?AFC_CLSID_STW_DEFAULT_DOC@@3U_GUID@@B + 0x128b)
+	0xffffffffffffffff:
+	</callstack>
+	<error>cmp_merge_kpt_db</error>
+	<date>Wed Jun 02 02:28:44 2021</date>
+	<version>Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>cmp_merge_kpt_db
+Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>AMERGE</sub_system>
+	<file>/quartus/atm/amerge/amerge_kpt_op.cpp</file>
+	<line>220</line>
+	<callstack>
+	0x0f4ab0dd:
+	0x01c38eab: CCL_FIO + 0x18eab (?AFC_CLSID_STW_DEFAULT_DOC@@3U_GUID@@B + 0x128b)
+	0xffffffffffffffff:
+	</callstack>
+	<error>cmp_merge_kpt_db</error>
+	<date>Wed Jun 02 02:29:57 2021</date>
+	<version>Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>cmp_merge_kpt_db
+Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>AMERGE</sub_system>
+	<file>/quartus/atm/amerge/amerge_kpt_op.cpp</file>
+	<line>220</line>
+	<callstack>
+	0x0f4bb0dd:
+	0x01c38eab: CCL_FIO + 0x18eab (?AFC_CLSID_STW_DEFAULT_DOC@@3U_GUID@@B + 0x128b)
+	0xffffffffffffffff:
+	</callstack>
+	<error>cmp_merge_kpt_db</error>
+	<date>Wed Jun 02 02:30:07 2021</date>
+	<version>Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>cmp_merge_kpt_db
+Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>AMERGE</sub_system>
+	<file>/quartus/atm/amerge/amerge_kpt_op.cpp</file>
+	<line>220</line>
+	<callstack>
+	0x0f4fb0dd:
+	0x01c18eab: CCL_FIO + 0x18eab (?AFC_CLSID_STW_DEFAULT_DOC@@3U_GUID@@B + 0x128b)
+	0xffffffffffffffff:
+	</callstack>
+	<error>cmp_merge_kpt_db</error>
+	<date>Wed Jun 02 02:31:42 2021</date>
+	<version>Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>cmp_merge_kpt_db
+Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>AMERGE</sub_system>
+	<file>/quartus/atm/amerge/amerge_kpt_op.cpp</file>
+	<line>220</line>
+	<callstack>
+	0x0f49b0dd:
+	0x001e8eab: CCL_FIO + 0x18eab (?AFC_CLSID_STW_DEFAULT_DOC@@3U_GUID@@B + 0x128b)
+	0xffffffffffffffff:
+	</callstack>
+	<error>cmp_merge_kpt_db</error>
+	<date>Wed Jun 02 03:10:39 2021</date>
+	<version>Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>cmp_merge_kpt_db
+Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>AMERGE</sub_system>
+	<file>/quartus/atm/amerge/amerge_kpt_op.cpp</file>
+	<line>220</line>
+	<callstack>
+	0x0f4ab0dd:
+	0x001a8eab: CCL_FIO + 0x18eab (?AFC_CLSID_STW_DEFAULT_DOC@@3U_GUID@@B + 0x128b)
+	0xffffffffffffffff:
+	</callstack>
+	<error>cmp_merge_kpt_db</error>
+	<date>Wed Jun 02 03:11:24 2021</date>
+	<version>Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>cmp_merge_kpt_db
+Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>PDB</sub_system>
+	<file>/quartus/db/pdb/pdb_error.cpp</file>
+	<line>157</line>
+	<callstack>
+	0x04412225: CCL_ERR + 0x2225 (?err_report_internal_error@@YIXPBD00H@Z + 0x15)
+	0x032d6af4: DB_PDB + 0x6af4 (?xfr_ptr@PDB_SEGMENT_READER@@UAIXAAPAVPDB_VIRTUAL_OBJECT_BASE@@PAVPDB_VIRTUAL_OBJECT_INFO@@@Z + 0x14)
+	0x0170ae60: CCL_MSG + 0x1ae60 (?write_message@MSG_REPORT_FILE@@QAI_NPAVMSG_POST@@@Z + 0x1490)
+	0x0170e09d: CCL_MSG + 0x1e09d (??6MSG_POST@@QAIXAAV?$PDB_SEGMENT_TEMPLATE@VPDB_HDB_SEG_BASE@@@@@Z + 0x6b)
+	0x01709ed8: CCL_MSG + 0x19ed8 (?write_message@MSG_REPORT_FILE@@QAI_NPAVMSG_POST@@@Z + 0x508)
+	0x032d377b: DB_PDB + 0x377b (?finish_reading_all@PDB_SEGMENT_READER@@QAIXXZ + 0x3b)
+	0x032dd708: DB_PDB + 0xd708 (?pdb_read_ptr@@YI_NAAVPDB_SEGMENT_READER@@P6IXAAVPDB_SEGMENT@@AAPAX@Z2@Z + 0x58)
+	0x03f3dd0d: synth_sgn + 0x7dd0d (?sgn_qic_helper@@YI?AW4SGN_STATE_ENUM@@PAVCMP_FACADE@@AAV?$vector@V?$basic_string@DU?$char_traits@D@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@D@@@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@V?$basic_string@DU?$char_traits@D@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@D@@@_Dinkum_std@@@@@_Dinkum_std@@@Z + 0x720bd)
+	0x03f41001: synth_sgn + 0x81001 (?sgn_qic_helper@@YI?AW4SGN_STATE_ENUM@@PAVCMP_FACADE@@AAV?$vector@V?$basic_string@DU?$char_traits@D@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@D@@@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@V?$basic_string@DU?$char_traits@D@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@D@@@_Dinkum_std@@@@@_Dinkum_std@@@Z + 0x753b1)
+	</callstack>
+	<error>pdb_id &lt;= object_info-&gt;m_ptr_table_size</error>
+	<date>Wed Jun 02 03:15:28 2021</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>pdb_id &lt;= object_info-&gt;m_ptr_table_size
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>AMERGE</sub_system>
+	<file>/quartus/atm/amerge/amerge_kpt_op.cpp</file>
+	<line>220</line>
+	<callstack>
+	0x0c04d9b7: atm_amerge + 0x3d9b7 (amerge_mini_merge + 0x3a5d7)
+	</callstack>
+	<error>cmp_merge_kpt_db</error>
+	<date>Wed Jun 02 03:15:42 2021</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>cmp_merge_kpt_db
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>AMERGE</sub_system>
+	<file>/quartus/atm/amerge/amerge_kpt_op.cpp</file>
+	<line>220</line>
+	<callstack>
+	0x0c04d9b7: atm_amerge + 0x3d9b7 (amerge_mini_merge + 0x3a5d7)
+	0x001c30d5: ccl_cfg_ini + 0x30d5 (?cfg_force_qexe_mode_off@@YIXXZ + 0x1e15)
+	0x0c04d152: atm_amerge + 0x3d152 (amerge_mini_merge + 0x39d72)
+	0x0c05405d: atm_amerge + 0x4405d (amerge_mini_merge + 0x40c7d)
+	0x0c01321d: atm_amerge + 0x321d
+	0x0c0133f1: atm_amerge + 0x33f1 (amerge_mini_merge + 0x11)
+	0x00412d94: quartus_map + 0x12d94
+	0x001c50d0: ccl_cfg_ini + 0x50d0 (?cfg_write_user_ini_file@@YI_NXZ + 0xbe0)
+	0x096e079b:
+	0x0afb4163:
+	0x096e079b:
+	0x004185fa: quartus_map + 0x185fa
+	0x008394f2: ccl_mem + 0x94f2 (?locked_allocate@MEM_SEGMENT_INTERNAL@@AAIPAXPADKKPAVMEM_TRACKER_DATA@@@Z + 0x62)
+	0x00835580: ccl_mem + 0x5580 (mem_out_of_memory + 0x4f0)
+	0x03342931: db_rdb + 0x2931 (??0RDB_WAVEFORM_OBJECT@@QAE@XZ + 0x211)
+	0x018920a6: comp_qcu + 0x20a6 (??1QCU_ACF_SETTING@@QAE@XZ + 0x126)
+	0x01895a66: comp_qcu + 0x5a66 (??4QCU_ACF_SETTING@@QAEAAU0@ABU0@@Z + 0x3366)
+	0x00409d3b: quartus_map + 0x9d3b
+	0x0041ab09: quartus_map + 0x1ab09
+	0x0185ce32: comp_qexe + 0xce32 (?qexe_get_command_line@@YIPBDXZ + 0x3a2)
+	0x018938e3: comp_qcu + 0x38e3 (??4QCU_ACF_SETTING@@QAEAAU0@ABU0@@Z + 0x11e3)
+	0x01897c29: comp_qcu + 0x7c29 (?check_license@QCU_FRAMEWORK@@UAI_NXZ + 0x139)
+	0x0185fbbd: comp_qexe + 0xfbbd (?qexe_process_cmdline_arguments@@YI_NPAVQEXE_CMDLINE@@HPAPBD@Z + 0x34d)
+	</callstack>
+	<error>cmp_merge_kpt_db</error>
+	<date>Wed Jun 02 03:15:53 2021</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>cmp_merge_kpt_db
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>AMERGE</sub_system>
+	<file>/quartus/atm/amerge/amerge_kpt_op.cpp</file>
+	<line>220</line>
+	<callstack>
+	0x0c04d9b7: atm_amerge + 0x3d9b7 (amerge_mini_merge + 0x3a5d7)
+	</callstack>
+	<error>cmp_merge_kpt_db</error>
+	<date>Wed Jun 02 03:16:06 2021</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>cmp_merge_kpt_db
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+

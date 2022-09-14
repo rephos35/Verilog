@@ -1,0 +1,14 @@
+module CLK_50M(clk);
+	output reg	clk;
+	parameter 	clkper=20;
+	initial begin 
+		clk=1;
+	end
+
+	always@ (*) begin
+		#(clkper/2);
+		clk<=~clk;
+	end
+
+
+endmodule

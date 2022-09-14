@@ -1,0 +1,189 @@
+# Reading D:/school/altera/14.1/modelsim_ase/tcl/vsim/pref.tcl
+# do CPU_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim PE vmap 10.3c Lib Mapping Utility 2014.09 Sep 20 2014
+# vmap -modelsim_quiet work rtl_work 
+# Copying D:/school/altera/14.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:/school/altera/14.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Mary/Documents/CPU {C:/Users/Mary/Documents/CPU/CPU.v}
+# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 02:37:03 on Jun 09,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Mary/Documents/CPU" C:/Users/Mary/Documents/CPU/CPU.v 
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 02:37:03 on Jun 09,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Mary/Documents/CPU {C:/Users/Mary/Documents/CPU/RESET.v}
+# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 02:37:03 on Jun 09,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Mary/Documents/CPU" C:/Users/Mary/Documents/CPU/RESET.v 
+# -- Compiling module RESET
+# 
+# Top level modules:
+# 	RESET
+# End time: 02:37:04 on Jun 09,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Mary/Documents/CPU {C:/Users/Mary/Documents/CPU/CLK_50M.v}
+# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 02:37:04 on Jun 09,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Mary/Documents/CPU" C:/Users/Mary/Documents/CPU/CLK_50M.v 
+# -- Compiling module CLK_50M
+# 
+# Top level modules:
+# 	CLK_50M
+# End time: 02:37:04 on Jun 09,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Mary/Documents/CPU {C:/Users/Mary/Documents/CPU/PC.v}
+# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 02:37:04 on Jun 09,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Mary/Documents/CPU" C:/Users/Mary/Documents/CPU/PC.v 
+# -- Compiling module PC
+# 
+# Top level modules:
+# 	PC
+# End time: 02:37:04 on Jun 09,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Mary/Documents/CPU {C:/Users/Mary/Documents/CPU/Memory.v}
+# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 02:37:04 on Jun 09,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Mary/Documents/CPU" C:/Users/Mary/Documents/CPU/Memory.v 
+# -- Compiling module Memory
+# 
+# Top level modules:
+# 	Memory
+# End time: 02:37:04 on Jun 09,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Mary/Documents/CPU {C:/Users/Mary/Documents/CPU/Controller.v}
+# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 02:37:04 on Jun 09,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Mary/Documents/CPU" C:/Users/Mary/Documents/CPU/Controller.v 
+# -- Compiling module Controller
+# 
+# Top level modules:
+# 	Controller
+# End time: 02:37:05 on Jun 09,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Mary/Documents/CPU {C:/Users/Mary/Documents/CPU/IR.v}
+# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 02:37:05 on Jun 09,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Mary/Documents/CPU" C:/Users/Mary/Documents/CPU/IR.v 
+# -- Compiling module IR
+# 
+# Top level modules:
+# 	IR
+# End time: 02:37:05 on Jun 09,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Mary/Documents/CPU {C:/Users/Mary/Documents/CPU/PSR.v}
+# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 02:37:05 on Jun 09,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Mary/Documents/CPU" C:/Users/Mary/Documents/CPU/PSR.v 
+# -- Compiling module PSR
+# 
+# Top level modules:
+# 	PSR
+# End time: 02:37:05 on Jun 09,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Mary/Documents/CPU {C:/Users/Mary/Documents/CPU/Register.v}
+# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 02:37:05 on Jun 09,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Mary/Documents/CPU" C:/Users/Mary/Documents/CPU/Register.v 
+# -- Compiling module Register
+# 
+# Top level modules:
+# 	Register
+# End time: 02:37:05 on Jun 09,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Mary/Documents/CPU {C:/Users/Mary/Documents/CPU/ALU.v}
+# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 02:37:05 on Jun 09,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Mary/Documents/CPU" C:/Users/Mary/Documents/CPU/ALU.v 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 02:37:05 on Jun 09,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.CPU
+# vsim -gui "+altera" -l msim_transcript -do "CPU_run_msim_rtl_verilog.do" 
+# Start time: 02:37:12 on Jun 09,2021
+# Loading work.CPU
+# Loading work.CLK_50M
+# Loading work.RESET
+# Loading work.Controller
+# Loading work.Memory
+# Loading work.Register
+# Loading work.PC
+# Loading work.IR
+# Loading work.ALU
+# Loading work.PSR
+add wave -position insertpoint sim:/CPU/*
+vsim work.CPU
+# vsim 
+# Start time: 02:37:24 on Jun 09,2021
+# Loading work.CPU
+# Loading work.CLK_50M
+# Loading work.RESET
+# Loading work.Controller
+# Loading work.Memory
+# Loading work.Register
+# Loading work.PC
+# Loading work.IR
+# Loading work.ALU
+# Loading work.PSR
+add wave -position insertpoint sim:/CPU/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Note: $stop    : C:/Users/Mary/Documents/CPU/Controller.v(154)
+#    Time: 1960 ps  Iteration: 1  Instance: /CPU/u1
+# Break in Module Controller at C:/Users/Mary/Documents/CPU/Controller.v line 154
+run
+# ** Note: $stop    : C:/Users/Mary/Documents/CPU/Controller.v(154)
+#    Time: 1980 ps  Iteration: 1  Instance: /CPU/u1
+# Break in Module Controller at C:/Users/Mary/Documents/CPU/Controller.v line 154
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 02:38:15 on Jun 09,2021, Elapsed time: 0:00:51
+# Errors: 0, Warnings: 0

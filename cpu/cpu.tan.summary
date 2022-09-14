@@ -1,0 +1,46 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 8.805 ns
+From           : control:c1|ir_cmd
+To             : ir_cmd
+From Clock     : clock
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clock'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 177.81 MHz ( period = 5.624 ns )
+From           : control:c1|pc_datain[0]
+To             : pc:p1|pc_dataout[0]
+From Clock     : clock
+To Clock       : clock
+Failed Paths   : 0
+
+Type           : Clock Hold: 'clock'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : control:c1|cnt[2]
+To             : control:c1|rf_write
+From Clock     : clock
+To Clock       : clock
+Failed Paths   : 13
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 13
+
+--------------------------------------------------------------------------------------
+

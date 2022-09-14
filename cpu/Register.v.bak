@@ -1,0 +1,17 @@
+module Register(clk, rf_write, rf_dataw, rf_addrw, rf_addr1, rf_addr2, rf_data1, rf_data2);
+	input 	clk;
+	input 	rf_write, rf_dataw, rf_addrw;//0>r 1>w
+	input		[11:0]rf_addr1, rf_addr2;
+	output	[31:0]rf_data1, rf_data2;
+	reg   	[31:0]regs[15:0];
+	
+	//read
+	assign rf_data1=regs[rf_addr1];	
+	assign rf_data2=regs[rf_addr2];
+	always @(posedge clk)begin
+			//write
+			if(rf_write)
+				regs[rf_addrw]<=rf_dataw;
+	end
+
+endmodule

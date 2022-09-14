@@ -1,0 +1,17 @@
+
+State Machine - |CPU|Controller:u1|state_new
+Name state_new.WB state_new.MEM state_new.EXE state_new.ID state_new.IF 
+state_new.IF 0 0 0 0 0 
+state_new.ID 0 0 0 1 1 
+state_new.EXE 0 0 1 0 1 
+state_new.MEM 0 1 0 0 1 
+state_new.WB 1 0 0 0 1 
+
+State Machine - |CPU|Controller:u1|state
+Name state.WB state.MEM state.EXE state.ID state.IF state.RESET 
+state.RESET 0 0 0 0 0 0 
+state.IF 0 0 0 0 1 1 
+state.ID 0 0 0 1 0 1 
+state.EXE 0 0 1 0 0 1 
+state.MEM 0 1 0 0 0 1 
+state.WB 1 0 0 0 0 1 

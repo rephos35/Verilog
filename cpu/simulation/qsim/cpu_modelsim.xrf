@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Mary/Desktop/cpu/alu.v
+source_file = 1, C:/Users/Mary/Desktop/cpu/control.v
+source_file = 1, C:/Users/Mary/Desktop/cpu/ir.v
+source_file = 1, C:/Users/Mary/Desktop/cpu/memory.v
+source_file = 1, C:/Users/Mary/Desktop/cpu/pc.v
+source_file = 1, C:/Users/Mary/Desktop/cpu/psr.v
+source_file = 1, C:/Users/Mary/Desktop/cpu/register.v
+source_file = 1, C:/Users/Mary/Desktop/cpu/cpu.v
+source_file = 1, C:/Users/Mary/Desktop/cpu/cpu.vwf
+source_file = 1, C:/Users/Mary/Desktop/cpu/db/cpu.cbx.xml
+design_name = cpu
+instance = comp, \clock~input , clock~input, cpu, 1
+instance = comp, \reset~input , reset~input, cpu, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, cpu, 1

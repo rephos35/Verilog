@@ -1,0 +1,230 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Mary/Documents/CPU/simulation/modelsim
+vALU
+Z1 !s110 1623177425
+!i10b 1
+!s100 oBE>g4B^bBozT3Qg8R9lC3
+I8CBiIHjk>VmGzUO8J:h9K1
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+R0
+w1623160557
+8C:/Users/Mary/Documents/CPU/ALU.v
+FC:/Users/Mary/Documents/CPU/ALU.v
+L0 1
+Z3 OV;L;10.3c;59
+r1
+!s85 0
+31
+!s108 1623177425.882000
+!s107 C:/Users/Mary/Documents/CPU/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Mary/Documents/CPU|C:/Users/Mary/Documents/CPU/ALU.v|
+!i113 1
+Z4 o-vlog01compat -work work
+Z5 !s92 -vlog01compat -work work +incdir+C:/Users/Mary/Documents/CPU
+n@a@l@u
+vCLK_50M
+Z6 !s110 1623177424
+!i10b 1
+!s100 m>MEGFOH^Q[AKC:PnE9z61
+IU9gF?gmbDXQ??^_b<;Zm;0
+R2
+R0
+Z7 w1623157949
+8C:/Users/Mary/Documents/CPU/CLK_50M.v
+FC:/Users/Mary/Documents/CPU/CLK_50M.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1623177424.187000
+!s107 C:/Users/Mary/Documents/CPU/CLK_50M.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Mary/Documents/CPU|C:/Users/Mary/Documents/CPU/CLK_50M.v|
+!i113 1
+R4
+R5
+n@c@l@k_50@m
+vController
+R1
+!i10b 1
+!s100 4P9zAJQ]?]<9khbCb?Af82
+I>lC<eK05IK3GR@Uh^NGQ?1
+R2
+R0
+w1623177162
+8C:/Users/Mary/Documents/CPU/Controller.v
+FC:/Users/Mary/Documents/CPU/Controller.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1623177425.007000
+!s107 C:/Users/Mary/Documents/CPU/Controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Mary/Documents/CPU|C:/Users/Mary/Documents/CPU/Controller.v|
+!i113 1
+R4
+R5
+n@controller
+vCPU
+!s110 1623177423
+!i10b 1
+!s100 `GXSm?nW5C@Ro3[3TAWUQ0
+I_d]>k?AfLYVnU9NZmlNcN3
+R2
+R0
+w1623171913
+8C:/Users/Mary/Documents/CPU/CPU.v
+FC:/Users/Mary/Documents/CPU/CPU.v
+L0 8
+R3
+r1
+!s85 0
+31
+!s108 1623177423.740000
+!s107 C:/Users/Mary/Documents/CPU/CPU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Mary/Documents/CPU|C:/Users/Mary/Documents/CPU/CPU.v|
+!i113 1
+R4
+R5
+n@c@p@u
+vIR
+R1
+!i10b 1
+!s100 HdhTBz_;PenWkX9J^nW2>2
+I=2?YljL0GAl@JjD0R@FMH0
+R2
+R0
+w1623100923
+8C:/Users/Mary/Documents/CPU/IR.v
+FC:/Users/Mary/Documents/CPU/IR.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1623177425.135000
+!s107 C:/Users/Mary/Documents/CPU/IR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Mary/Documents/CPU|C:/Users/Mary/Documents/CPU/IR.v|
+!i113 1
+R4
+R5
+n@i@r
+vMemory
+R6
+!i10b 1
+!s100 VfgHi2h<JJ3`2?AJRm?@<0
+IYG5fgQl20noH9M7MhDBMH2
+R2
+R0
+w1623099493
+8C:/Users/Mary/Documents/CPU/Memory.v
+FC:/Users/Mary/Documents/CPU/Memory.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1623177424.889000
+!s107 C:/Users/Mary/Documents/CPU/Memory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Mary/Documents/CPU|C:/Users/Mary/Documents/CPU/Memory.v|
+!i113 1
+R4
+R5
+n@memory
+vPC
+R6
+!i10b 1
+!s100 SGNB9>WJneYQQ:HN0me`n2
+IHm[2=jM[EXmWIVHfDL2>B0
+R2
+R0
+w1623099452
+8C:/Users/Mary/Documents/CPU/PC.v
+FC:/Users/Mary/Documents/CPU/PC.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1623177424.627000
+!s107 C:/Users/Mary/Documents/CPU/PC.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Mary/Documents/CPU|C:/Users/Mary/Documents/CPU/PC.v|
+!i113 1
+R4
+R5
+n@p@c
+vPSR
+R1
+!i10b 1
+!s100 HkCJoMWim2JXm6z4@@5Vf1
+IQ_MzADF<UXDL`<I;4V:dY2
+R2
+R0
+w1623159651
+8C:/Users/Mary/Documents/CPU/PSR.v
+FC:/Users/Mary/Documents/CPU/PSR.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1623177425.287000
+!s107 C:/Users/Mary/Documents/CPU/PSR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Mary/Documents/CPU|C:/Users/Mary/Documents/CPU/PSR.v|
+!i113 1
+R4
+R5
+n@p@s@r
+vRegister
+R1
+!i10b 1
+!s100 5ioHPkai;zP9:hQIZ<=XX3
+I4>YOlG@ez=C7=1Wn7@gQ[0
+R2
+R0
+w1623167561
+8C:/Users/Mary/Documents/CPU/Register.v
+FC:/Users/Mary/Documents/CPU/Register.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1623177425.419000
+!s107 C:/Users/Mary/Documents/CPU/Register.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Mary/Documents/CPU|C:/Users/Mary/Documents/CPU/Register.v|
+!i113 1
+R4
+R5
+n@register
+vRESET
+R6
+!i10b 1
+!s100 S882VIXLC<OdYk:NAICN:0
+I2XggSQD<:XJJHT_4SeS8D1
+R2
+R0
+R7
+8C:/Users/Mary/Documents/CPU/RESET.v
+FC:/Users/Mary/Documents/CPU/RESET.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1623177424.018000
+!s107 C:/Users/Mary/Documents/CPU/RESET.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Mary/Documents/CPU|C:/Users/Mary/Documents/CPU/RESET.v|
+!i113 1
+R4
+R5
+n@r@e@s@e@t

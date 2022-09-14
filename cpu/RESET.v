@@ -1,0 +1,11 @@
+module RESET(reset);
+	output reg	reset;
+	parameter 	t=80;
+	reg			i;
+	initial begin 
+		reset=1;
+		#t;
+		reset=0;
+	end
+
+endmodule

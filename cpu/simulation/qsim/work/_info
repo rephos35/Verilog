@@ -1,0 +1,50 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Mary/Desktop/cpu/simulation/qsim
+vcpu
+Z1 !s110 1622577978
+!i10b 1
+!s100 PaAMR3NzSJW482O^KAF6]2
+IHm:He2_BHOLoXCIW>EOI;1
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+R0
+w1622577978
+8cpu.vo
+Fcpu.vo
+L0 32
+Z3 OV;L;10.3c;59
+r1
+!s85 0
+31
+!s108 1622577978.923000
+!s107 cpu.vo|
+!s90 -work|work|cpu.vo|
+!i113 1
+Z4 o-work work
+vcpu_vlg_vec_tst
+R1
+!i10b 1
+!s100 hR`bdKk90bI`=D=h6LYC>3
+INQ4eSKMMDd]^KV4TCBfDZ1
+R2
+R0
+w1622577976
+8cpu.vwf.vt
+Fcpu.vwf.vt
+L0 30
+R3
+r1
+!s85 0
+31
+!s108 1622577978.974000
+!s107 cpu.vwf.vt|
+!s90 -work|work|cpu.vwf.vt|
+!i113 1
+R4
